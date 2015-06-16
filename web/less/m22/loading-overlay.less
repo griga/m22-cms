@@ -1,0 +1,31 @@
+@import "mixins.less";
+
+.m22-overlay-loader-loading{
+  position: relative;
+  pointer-events: none;
+  .transition(all .2s ease-in);
+  .m22-overlay-loader-icon{
+    z-index: 1001;
+    opacity: 1;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255,.6);
+    pointer-events: none;
+  }
+}
+.m22-overlay-loader-icon{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  //  display: none;
+  z-index: -1000;
+  opacity: 0;
+  .transition(opacity .2s ease-in);
+}

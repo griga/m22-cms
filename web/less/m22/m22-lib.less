@@ -1,0 +1,61 @@
+.keyframes(@name; @arguments) {
+  @-webkit-keyframes @name { @arguments();}
+  @-moz-keyframes @name { @arguments();}
+  @-ms-keyframes @name { @arguments();}
+  @-o-keyframes @name { @arguments();}
+  @keyframes @name { @arguments();
+  }
+}
+
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+  -moz-animation: @arguments;
+  -ms-animation: @arguments;
+  -o-animation: @arguments;
+  animation: @arguments;
+}
+
+.transform-style(@style: preserve-3d) {
+  -webkit-transform-style: @style;
+  -moz-transform-style: @style;
+  -ms-transform-style: @style;
+  -o-transform-style: @style;
+  transform-style: @style;
+}
+
+.transform(@transform) {
+  -webkit-transform: @transform;
+  -moz-transform: @transform;
+  -ms-transform: @transform;
+  -o-transform: @transform;
+  transform: @transform;
+}
+.transform-origin(@transform) {
+  -webkit-transform-origin: @transform;
+  -moz-transform-origin: @transform;
+  -ms-transform-origin: @transform;
+  -o-transform-origin: @transform;
+  transform-origin: @transform;
+}
+
+// layout
+.sticky-footer(@height) {
+html {
+  min-height: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+body {
+  overflow: hidden;
+  margin: auto auto @height;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-height: @height;
+  width: 100%;
+}
+}

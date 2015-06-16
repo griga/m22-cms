@@ -1,0 +1,81 @@
+@import "../m22/m22-lib.less";
+@import "../bootstrap/bootstrap.less";
+@import "variables.less";
+@import "bootswatch.less";
+@import "plugins/nestables.less";
+
+.sticky-footer(30px);
+
+.one-column-layout{
+  margin-top: 54px;
+}
+
+.grid-view{
+  .filters{
+    td{
+      padding: 1px;
+    }
+    .form-control{
+      padding: 2px;
+    }
+  }
+}
+
+.ml-group-wrapper{
+  position: relative;
+  .ml-handlers{
+    position: absolute;
+    right: 0;
+    top: -18px;
+  }
+}
+
+.btn.btn-ml {
+  font-size: 0.6em;
+  padding: 0.2em .4em;
+}
+
+.form-horizontal{
+  .label-multilingual{
+    margin-top: 19px;
+  }
+}
+
+
+.font-lg {
+  font-size: 160%!important;
+}
+.font-md {
+  font-size: 120%!important;
+}
+
+.form-control{
+  border-radius: 1px;
+}
+
+.btn{
+  border-radius: 1px;
+
+}
+
+.m22-fieldset{
+  legend{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .transition(all .2s);
+  &.expanded{
+      min-height: 100px;
+  }
+  &.collapsed{
+    height: 60px;
+    >*{
+      display: none;
+    }
+    >legend{
+      display: block !important;
+    }
+  }
+
+}
