@@ -14,7 +14,7 @@ class m150101_225937_content extends yii\db\Migration
         $this->createTable('{{%content}}', [
             'id' => 'pk', //'pk',
             'alias' => 'string',//'VARCHAR(255)',
-            'enabled' => 'boolean DAFAULT 1', //'TINYINT NOT NULL DEFAULT 1',
+            'enabled' => 'boolean NOT NULL DEFAULT 1', //'TINYINT NOT NULL DEFAULT 1',
             'type' => 'smallint NOT NULL', //'TINYINT NOT NULL',
             'parent_id' => 'integer DEFAULT 0', //'INT NULL DEFAULT NULL',
             'image_id' => 'integer',//'INT',
