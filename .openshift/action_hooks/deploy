@@ -22,20 +22,17 @@ if [ ! -f "${OPENSHIFT_DATA_DIR}composer/bin/composer" ]; then
   ln -s $OPENSHIFT_DATA_DIR/composer/bin/composer $OPENSHIFT_DATA_DIR/bin/composer
   php ${OPENSHIFT_DATA_DIR}composer/bin/composer global require "fxp/composer-asset-plugin:~1.0.0" >/dev/null
 
-  echo "Running composer install"
-  cd $OPENSHIFT_REPO_DIR/yii-app
-  php $OPENSHIFT_DATA_DIR/bin/composer install
-
 else
   echo "Updating composer"
   cd ${OPENSHIFT_DATA_DIR}composer
   git pull --quiet
   php ${OPENSHIFT_DATA_DIR}composer/bin/composer install >/dev/null
 
-  echo "Running composer update"
-  cd $OPENSHIFT_REPO_DIR/yii-app
-  php $OPENSHIFT_DATA_DIR/bin/composer update
 fi
+
+echo "Running composer install"
+cd $OPENSHIFT_REPO_DIR
+php $OPENSHIFT_DATA_DIR/bin/composer install
 
 php yii migrate/up --migrationPath=@app/modules/admin/migrations --interactive=0
 php yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations --interactive=0
