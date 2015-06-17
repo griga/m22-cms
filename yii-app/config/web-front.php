@@ -65,7 +65,7 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'mailer' =>  require(__DIR__ . '/mailer.php'),
+        'mailer' =>  require(__DIR__ . '/components/mailer.php'),
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -75,7 +75,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/components/db.php'),
         'thumbnail' => [
             'class' => 'himiklab\thumbnail\EasyThumbnail',
             'cacheAlias' => 'assets/thumbnails',
