@@ -43,13 +43,13 @@
                 }
             ],
             "generateCookieValidationKey": [
-                "config/web-front.php",
-                "config/web-back.php"
+                "yii-app/config/web-front.php",
+                "yii-app/config/web-back.php"
             ]
         },
         "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+            "npm-asset-library": "yii-app/vendor/npm",
+            "bower-asset-library": "yii-app/vendor/bower"
         }
     }
 }
