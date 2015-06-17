@@ -1,7 +1,7 @@
 {
     "name": "griga/m22-cms",
     "description": "m22 cms template",
-    "keywords": ["m22", "sms"],
+    "keywords": ["m22", "cms"],
     "homepage": "https://github.com/griga/m22-cms/",
     "type": "project",
     "license": "BSD-3-Clause",
@@ -37,9 +37,9 @@
         "yii\\composer\\Installer::postCreateProject": {
             "setPermission": [
                 {
-                    "runtime": "0777",
-                    "../web/assets": "0777",
-                    "yii": "0755"
+                    "yii-app/runtime": "0777",
+                    "web/assets": "0777",
+                    "yii-app/yii": "0755"
                 }
             ],
             "generateCookieValidationKey": [
