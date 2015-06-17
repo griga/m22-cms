@@ -16,7 +16,10 @@
         "facebook/php-sdk-v4" : "4.0.*",
 		"omgdef/yii2-multilingual-behavior": "~2.0",
         "himiklab/yii2-easy-thumbnail-image-helper" : "*",
-		"kartik-v/yii2-widget-datetimepicker": "*"
+		"kartik-v/yii2-widget-datetimepicker": "*",
+        "bower-asset/animate.css": ">=3.3.0",
+        "bower-asset/wow.js": ">=1.1.2",
+        "bower-asset/font-awesome": ">=4.3.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

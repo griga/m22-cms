@@ -5,7 +5,8 @@
 Thumbs.db
 
 # composer vendor dir
-/vendor
+/yii-app/vendor
+composer.lock
 
 
 
@@ -15,8 +16,6 @@ Thumbs.db
 
 node_modules
 
-
-yii-app/runtime
 
 .sass-cache
 
